@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[156],{156:function(e,n,o){o.r(n),o.d(n,{default:function(){return u}});var r,t=o(9434),h=o(1014),c=o(168),i=o(6444).ZP.div(r||(r=(0,c.Z)(["\npadding: 80px 40px;\n"]))),s=o(184),u=function(){var e=(0,t.v9)(h.y6);return(0,s.jsxs)(i,{children:[(0,s.jsx)("h1",{children:"Welcome to Phone book."}),!e&&(0,s.jsx)("h3",{children:"Please register"})]})}}}]);
+//# sourceMappingURL=156.26c1c6fe.chunk.js.map
