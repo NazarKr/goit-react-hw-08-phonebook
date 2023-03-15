@@ -1,4 +1,3 @@
-
 import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthLayout from './components/AuthLayout/AuthLayout';
