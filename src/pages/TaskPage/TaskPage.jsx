@@ -24,12 +24,14 @@ const TaskPage = () => {
             <TaskSection>
                 <TaskCounter />
             </TaskSection>
+
             <TaskSection>
                 {/* <h2>Filter by status</h2> */}
                 {/* <StatusFilter /> */}
                 <TaskForm />
                 {isLoading && !error && <b>Request in progress...</b>}
             </TaskSection>
+            
             <TaskSection>
                 <TaskList />
             </TaskSection>

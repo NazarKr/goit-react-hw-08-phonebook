@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { MdClose } from "react-icons/md";
 import css from "./Task.module.css";
 import { deleteTask, toggleCompleted } from 'redux/tasks/operations';
+import { TackText } from "components/TaskList/TaskList.styled";
 
 const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Task = ({ task }) => {
         checked={task.completed}
         onChange={handleToggle}
       />
-      <p className={css.text}>{task.text}</p>
+      <TackText>{task.text}</TackText>
       <button className={css.btn} onClick={handleDelete}>
         <MdClose size={24} />
       </button>
