@@ -1,0 +1,14 @@
+{
+    "contacts": {
+        "en": "Contacts",
+        "ua": "Контакти"
+    },
+    "tasks": {
+        "en": "Tasks",
+        "ua": "Завдання"
+    },
+    "logout_text": {
+        "en": "Logout",
+        "ua": "Вихід"
+    }    
+}    

@@ -1,10 +1,12 @@
 import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LangContext from "shared/hooks/langContext";
 import AuthLayout from './components/AuthLayout/AuthLayout';
 import { UserRoutes } from './components/UserRouters/UserRouters';
 
 export const App = () => {
   return (
+    <LangContext>
     <AuthLayout>
       <UserRoutes />
       <ToastContainer
@@ -15,6 +17,7 @@ export const App = () => {
         draggable
         Transition="zoom"
       />
-    </AuthLayout>
+      </AuthLayout>
+    </LangContext>
   );
 };

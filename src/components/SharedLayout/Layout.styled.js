@@ -13,6 +13,10 @@ export const HeaderContainer = styled.header`
   background: white;
   border: 1px solid lightgray;
   box-shadow: ${theme.shadow.high};
+
+  @media screen and (min-width: 321px) {
+    width: 100%;
+  }
 `;
 
 export const MainContainer = styled.main`
@@ -26,4 +30,8 @@ export const MainContainer = styled.main`
   background: white;
   border: 1px solid lightgray;
   box-shadow: ${theme.shadow.high};
+
+  @media screen and (min-width: 321px) {
+    width: 100%;
+  }
 `;
