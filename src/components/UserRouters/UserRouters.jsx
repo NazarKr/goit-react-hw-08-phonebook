@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 const SharedLayout = lazy(() => import("components/SharedLayout/SharedLayout"));
 const HomePage = lazy(() => import("pages/HomePage/HomePage"));
 const ContactsPage = lazy(() => import("pages/ContactsPage/ContactsPage"));
+const TaskPage = lazy(() => import("pages/TaskPage/TaskPage"));
 const RegisterPage = lazy(() => import("pages/RegisterPage/RegistetPage"));
 const LoginPage = lazy(() => import("pages/LoginPage/LoginPage"));
 const NotFoundPage = lazy(() => import("pages/NotFoundPage/NotFoundPage"));
@@ -24,6 +25,8 @@ export const UserRoutes = () => {
 
                     <Route element={<PrivateRoute />}>
                         <Route path="contacts" element={<ContactsPage />} />
+                        <Route path="tasks" element={<TaskPage />} />
+
                     </Route>
 
                     <Route path="*" element={<NotFoundPage />} />

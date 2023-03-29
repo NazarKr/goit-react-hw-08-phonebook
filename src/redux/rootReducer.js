@@ -5,6 +5,10 @@ import storage from 'redux-persist/lib/storage';
 import contactsReducer from './contacts/contactsSlice';
 import filterReducer from './filter/filterSlice';
 import authReducer from './auth/authSlice';
+import tasksReducer from './tasks/tasksSlice';
+// import { taskfiltersReducer } from './tasks/filtersSlice';
+
+
 
 const persistConfig = {
   key: 'root',
@@ -18,6 +22,8 @@ const rootReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
   auth: persistedAuthReducer,
+  tasks: tasksReducer,
+  // taskFilters: taskfiltersReducer,
 });
 
 export default rootReducer;
