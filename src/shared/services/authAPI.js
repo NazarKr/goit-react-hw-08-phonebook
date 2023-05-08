@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://nodejs-phonebook.onrender.com/',
+  baseURL: 'https://nodejs-phonebook.onrender.com/api',
 });
 
 
