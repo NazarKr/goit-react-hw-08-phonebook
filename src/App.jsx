@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import LangContext from "shared/hooks/langContext";
 import AuthLayout from './components/AuthLayout/AuthLayout';
 import { UserRoutes } from './components/UserRouters/UserRouters';
-import { Analytics } from '@vercel/analytics/react';
+// import { Analytics } from '@vercel/analytics/react';
 
 export const App = () => {
   return (
@@ -18,7 +18,7 @@ export const App = () => {
           draggable
           Transition="zoom"
         />
-        <Analytics />
+        {/* <Analytics /> */}
       </AuthLayout>
     </LangContext>
   );

@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const HeaderWraper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+`
+
 export const Link = styled(NavLink)`
   display: inline-block;
   margin: 0 5px;

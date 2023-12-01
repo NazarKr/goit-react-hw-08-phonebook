@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "redux/auth/authOperations";
 import { getUser } from "redux/auth/authSelector";
 import ButtonTxt from "shared/Buttons/ButtonText";
-import { Link, LogoutWrapper } from "./NavBarUser.styled";
+import { Link, LogoutWrapper, HeaderWraper } from './NavBarUser.styled';
 
 import useLang from "shared/hooks/useLang";
 import locale from "./UserLocale.json";
@@ -23,15 +23,15 @@ const NavbarUser = () => {
         dispatch(logout());
     }
     return (
-        <>
-            <Link to="/contacts">{contacts}</Link>
-            <Link to="/tasks">{tasks}</Link>
-            <LogoutWrapper>
-                {name}
-                <ButtonTxt onClick={onLogout} text={logout_text} />
-            </LogoutWrapper>
-        </>
-    )
+      <HeaderWraper>
+        <Link to="/contacts">{contacts}</Link>
+        <Link to="/tasks">{tasks}</Link>
+        <LogoutWrapper>
+          <p>{name}</p>
+          <ButtonTxt onClick={onLogout} text={logout_text} />
+        </LogoutWrapper>
+      </HeaderWraper>
+    );
 }
 
 export default NavbarUser;

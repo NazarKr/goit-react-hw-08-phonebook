@@ -10,6 +10,7 @@ export const ContactListUl = styled.ul`
 
 export const ContactItemLi = styled.li`
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: space-between;
   width: 260px;
@@ -25,10 +26,15 @@ export const ContactItemLi = styled.li`
   }
 `;
 
+export const ContactListWraper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ContactName = styled.p`
   text-align: left;
-  font-size: ${theme.fontSizes.xs};
-  font-weight: ${theme.fontWeights.light};
+  font-size: ${theme.fontSizes.s};
+  font-weight: ${theme.fontWeights.regular};
   @media (min-width: 420px) {
     font-size: ${theme.fontSizes.m};
   }
@@ -38,8 +44,4 @@ export const ContactNumber = styled.p`
   text-align: right;
   font-size: ${theme.fontSizes.xs};
   font-weight: ${theme.fontWeights.light};
-  margin-right: 6px;
-  @media (min-width: 420px) {
-    font-size: ${theme.fontSizes.s};
-  }
 `;
