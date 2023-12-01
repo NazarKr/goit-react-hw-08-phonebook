@@ -28,9 +28,9 @@ const ContactList = () => {
 
   const list = useSelector(selectFilteredContacts);
 
-  const handleContactDelete = id => {
-      console.log('Deleting contact with id:', id);
-    dispatch(fetchDeleteContact(id));
+  const handleContactDelete = _id => {
+      console.log('Deleting contact with id:', _id);
+    dispatch(fetchDeleteContact(_id));
     toast.info('Contact was deleted');
   };
 
@@ -39,9 +39,9 @@ const ContactList = () => {
       <ContactListUl>
         <CounterContacts />
 
-        {list.map(({ id, name, phone, email }) => {
+        {list.map(({ _id, name, phone, email }) => {
           return (
-            <ContactItemLi key={id}>
+            <ContactItemLi key={_id}>
               <ContactListWraper>
                 <ContactName>{name}</ContactName>
                 <ContactNumber>{phone}</ContactNumber>
@@ -50,8 +50,7 @@ const ContactList = () => {
               <ButtonIcon
                 icon={AiOutlineDelete}
                 iconSize={20}
-                onClick={() => handleContactDelete(id)}
-                id={id} // передаємо id до ButtonIcon
+                onClick={() => handleContactDelete(_id)}
               ></ButtonIcon>
             </ContactItemLi>
           );
