@@ -21,7 +21,7 @@ const ValidationSchema = Yup.object().shape({
     .max(20, 'Too Long!')
     .required('Required'),
   lastName: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!'),
-  tel: Yup.string()
+  phone: Yup.string()
     .matches(phoneRegExp, 'Number is not valid')
     .required('Required'),
 });
@@ -38,8 +38,9 @@ const dispatch = useDispatch();
       return;
     }
 
-    const number = data.number;
-    const action = fetchAddContact({ name, number });
+    const phone = data.phone;
+    const email = data.email;
+    const action = fetchAddContact({ name, phone, email });
     dispatch(action);
   };
 
@@ -48,10 +49,11 @@ const dispatch = useDispatch();
       initialValues={{
         firstName: '',
         lastName: '',
-        tel: '',
+        phone: '',
+        email: '',
       }}
       validationSchema={ValidationSchema}
-      onSubmit={({ firstName, lastName, tel }, { resetForm }) => {
+      onSubmit={({ firstName, lastName, phone, email }, { resetForm }) => {
         const name = (firstName, lastName) => {
           if (lastName) {
             return firstName.trim() + ' ' + lastName.trim();
@@ -61,7 +63,8 @@ const dispatch = useDispatch();
 
         const contact = {
           name: name(firstName, lastName),
-          number: tel.trim(),
+          phone: phone.trim(),
+          email: email,
         };
 
         handleAddContact(contact);
@@ -78,9 +81,13 @@ const dispatch = useDispatch();
         <Input id="lastName" name="lastName" placeholder="Last name" />
         <ErrorMessage name="lastName" component={Error} />
 
-        <Label htmlFor="tel">Phone</Label>
-        <Input id="tel" name="tel" placeholder="Phone" type="tel" />
-        <ErrorMessage name="tel" component={Error} />
+        <Label htmlFor="phone">Phone</Label>
+        <Input id="phone" name="phone" placeholder="Phone" type="phone" />
+        <ErrorMessage name="phone" component={Error} />
+
+        <Label htmlFor="email">Email</Label>
+        <Input id="email" name="email" placeholder="email" type="email" />
+        <ErrorMessage name="email" component={Error} />
 
         <Button type="submit" disabled={false} children="Add contact"></Button>
       </Form>
