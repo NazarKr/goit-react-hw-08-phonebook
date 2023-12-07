@@ -1,6 +1,7 @@
 import { Link } from "./NavBarAuth.styled";
 import useLang from "shared/hooks/useLang";
 import locale from "./AuthLocale.json";
+import { HeaderWraper } from "../NavBarUser/NavBarUser.styled";
 
 const NavbarAuth = () => {
     const { lang } = useLang();
@@ -8,10 +9,10 @@ const NavbarAuth = () => {
     const login = locale.login[lang];
 
     return (
-        <nav>
+        <HeaderWraper>
             <Link to="/register">{register}</Link> | 
             <Link to="login"> {login}</Link>
-        </nav>
+        </HeaderWraper>
     )
 }
 

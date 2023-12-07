@@ -3,10 +3,8 @@ import { logout } from "redux/auth/authOperations";
 import { getUser } from "redux/auth/authSelector";
 import ButtonTxt from "shared/Buttons/ButtonText";
 import { Link, LogoutWrapper, HeaderWraper } from './NavBarUser.styled';
-
 import useLang from "shared/hooks/useLang";
 import locale from "./UserLocale.json";
-
 
 const NavbarUser = () => {
     const { lang } = useLang();
@@ -14,14 +12,13 @@ const NavbarUser = () => {
     const tasks = locale.tasks[lang];
     const logout_text = locale.logout_text[lang];
 
-    
-
     const { name } = useSelector(getUser);
     const dispatch = useDispatch();
 
     const onLogout = () => {
         dispatch(logout());
-    }
+  }
+  
     return (
       <HeaderWraper>
         <Link to="/contacts">{contacts}</Link>

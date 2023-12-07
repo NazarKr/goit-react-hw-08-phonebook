@@ -23,5 +23,6 @@ export const LogoutWrapper = styled.div`
     display: flex;
     /* flex-direction: row; */
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    margin-left: 20px;
 `;

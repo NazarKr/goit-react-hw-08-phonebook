@@ -1,14 +1,15 @@
 import {  useDispatch } from "react-redux";
-// import { isUserLogin } from "redux/auth/authSelector";
 import { register } from "redux/auth/authOperations";
-// import { Navigate } from "react-router-dom";
 import RegisterForm from "components/RegisterForm/RegisterForm";
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleSignup = (data) => {
         dispatch(register(data));
+        navigate('/after-registration'); 
     }
 
     return (

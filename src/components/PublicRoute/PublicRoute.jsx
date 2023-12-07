@@ -11,7 +11,7 @@ const PublicRoute = () => {
     }
 
     if (isLogin) {
-        return <Navigate to="/contacts" />
+        return <Navigate to="/" />
     }
 
     return <Outlet />

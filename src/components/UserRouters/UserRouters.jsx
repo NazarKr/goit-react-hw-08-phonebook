@@ -8,30 +8,34 @@ const HomePage = lazy(() => import("pages/HomePage/HomePage"));
 const ContactsPage = lazy(() => import("pages/ContactsPage/ContactsPage"));
 const TaskPage = lazy(() => import("pages/TaskPage/TaskPage"));
 const RegisterPage = lazy(() => import("pages/RegisterPage/RegistetPage"));
+const AfterRegistrationPage = lazy(() => import('pages/AfterRegistrationPage/AfterRegistrationPage'));
 const LoginPage = lazy(() => import("pages/LoginPage/LoginPage"));
 const NotFoundPage = lazy(() => import("pages/NotFoundPage/NotFoundPage"));
 
-export const UserRoutes = () => {
+export const    UserRoutes = () => {
     return (
-        <Suspense fallback={<p>......Loading</p>}>
-            <Routes>
-                <Route path="/" element={<SharedLayout />}>
-                    <Route index element={<HomePage />} />
-                    
-                    <Route element={<PublicRoute />}>
-                        <Route path="register" element={<RegisterPage />} />
-                        <Route path="login" element={<LoginPage />} />
-                    </Route>
+      <Suspense fallback={<p>......Loading</p>}>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<HomePage />} />
 
-                    <Route element={<PrivateRoute />}>
-                        <Route path="contacts" element={<ContactsPage />} />
-                        <Route path="tasks" element={<TaskPage />} />
+            <Route element={<PublicRoute />}>
+              <Route path="register" element={<RegisterPage />} />
+              <Route
+                path="after-registration"
+                element={<AfterRegistrationPage />}
+              />
+              <Route path="login" element={<LoginPage />} />
+            </Route>
 
-                    </Route>
+            <Route element={<PrivateRoute />}>
+              <Route path="contacts" element={<ContactsPage />} />
+              <Route path="tasks" element={<TaskPage />} />
+            </Route>
 
-                    <Route path="*" element={<NotFoundPage />} />
-                </Route>
-            </Routes>
-        </Suspense>
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     );
 }
