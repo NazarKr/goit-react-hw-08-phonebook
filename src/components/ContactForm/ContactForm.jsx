@@ -41,6 +41,7 @@ const dispatch = useDispatch();
     const phone = data.phone;
     const email = data.email;
     const action = fetchAddContact({ name, phone, email });
+    
     dispatch(action);
   };
 
@@ -68,7 +69,7 @@ const dispatch = useDispatch();
         };
 
         handleAddContact(contact);
-        toast.info('Contact was add');
+        toast.info(`Contact was add ${contact.name}`);
         resetForm();
       }}
     >
