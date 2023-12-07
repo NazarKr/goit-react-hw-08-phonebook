@@ -1,5 +1,5 @@
 
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilteredContacts } from 'redux/contacts/contactsSelectors';
 import { AiOutlineDelete } from 'react-icons/ai';
@@ -22,9 +22,9 @@ import { CounterContacts } from 'components/CounterContacts/CounterContacts';
 const ContactList = () => {
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchAllContacts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchAllContacts());
+  }, [dispatch]);
 
   const list = useSelector(selectFilteredContacts);
 
