@@ -1,5 +1,5 @@
 // import StatusFilter from "components/StatusFilter/StatusFilter";
-import TaskCounter from "components/TaskCounter/TaskCounter";
+// import TaskCounter from "components/TaskCounter/TaskCounter";
 import TaskForm from "components/TaskForm/TaskForm";
 import TaskList from "components/TaskList/TaskList";
 
@@ -22,7 +22,7 @@ const TaskPage = () => {
     return (
         <TaskWrapper>
             <TaskSection>
-                <TaskCounter />
+                {/* <TaskCounter /> */}
             </TaskSection>
 
             <TaskSection>
