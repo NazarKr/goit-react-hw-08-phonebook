@@ -10,12 +10,14 @@ export const addTask = async id => {
   return data;
 };
 
-// export const deleteContact = async id => {
-//   const { data } = await instance.delete(`/contacts/${id}`);
-//   return data;
-// };
+export const deleteTask = async id => {
+  const { data } = await instance.delete(`/tasks/${id}`);
+  return data;
+};
 
-// export const editContact = async id => {
-//   const { data } = await instance.put(`/contacts/${id}`);
-//   return data;
-// };
+export const toggleCompleted = async task => {
+  const { data } = await instance.patch(`/tasks/${task._id}/status`, {
+    done: !task.done,
+  });
+  return data;
+};

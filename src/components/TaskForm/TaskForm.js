@@ -37,8 +37,6 @@ const TaskForm = () => {
     dispatch(action);
   };
 
-  debugger;
-  
   return (
     <Formik
       initialValues={{

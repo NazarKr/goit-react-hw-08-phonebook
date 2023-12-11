@@ -12,7 +12,7 @@ export const selectStatusFilter = state => state.tasks.items;
 export const selectVisibleTasks = createSelector(
   [selectTasks, selectStatusFilter],
   (tasks, statusFilter) => {
-    console.log('Calculating visible tasks');
+    // console.log('Calculating visible tasks');
 
     switch (statusFilter) {
       case statusFilters.active:
