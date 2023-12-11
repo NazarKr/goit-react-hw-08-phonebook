@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilteredContacts } from 'redux/contacts/contactsSelectors';
@@ -39,7 +38,7 @@ const ContactList = () => {
       <ContactListUl>
         <CounterContacts />
 
-        {list.map(({ _id, name, phone, email }) => {
+        {list.map(({ _id, name, phone, email, favorite }) => {
           return (
             <ContactItemLi key={_id}>
               <ContactListWraper>
@@ -47,6 +46,13 @@ const ContactList = () => {
                 <ContactNumber>{phone}</ContactNumber>
                 <ContactNumber>{email}</ContactNumber>
               </ContactListWraper>
+              <input
+                type="checkbox"
+                // className={css.checkbox}
+                checked={favorite}
+                // onChange={handleToggle}
+              />
+
               <ButtonIcon
                 icon={AiOutlineDelete}
                 iconSize={20}
