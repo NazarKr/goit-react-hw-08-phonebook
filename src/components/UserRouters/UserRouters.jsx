@@ -1,5 +1,6 @@
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 import PublicRoute from 'components/PublicRoute/PublicRoute';
+import ReactSpinner from 'components/ReactSpinner/ReactSpinner';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from "react-router-dom";
 
@@ -14,7 +15,7 @@ const NotFoundPage = lazy(() => import("pages/NotFoundPage/NotFoundPage"));
 
 export const    UserRoutes = () => {
     return (
-      <Suspense fallback={<p>......Loading</p>}>
+      <Suspense fallback={ReactSpinner}>
         <Routes>
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<HomePage />} />

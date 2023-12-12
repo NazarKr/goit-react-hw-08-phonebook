@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { fetchTasks } from "redux/tasks/operations";
 import { selectError, selectIsLoading } from "redux/tasks/selectors";
 import { TaskSection, TaskWrapper } from "./TaskPage.styled";
+import ReactSpinner from "components/ReactSpinner/ReactSpinner";
 
 
 const TaskPage = () => {
@@ -25,7 +26,7 @@ const TaskPage = () => {
           {/* <h2>Filter by status</h2>
                 <StatusFilter /> */}
           <TaskForm />
-          {isLoading && !error && <b>Request in progress...</b>}
+          {isLoading && !error && ReactSpinner}
         </TaskSection>
 
         <TaskSection>
