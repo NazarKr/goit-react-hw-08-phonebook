@@ -1,5 +1,5 @@
 // import StatusFilter from "components/StatusFilter/StatusFilter";
-// import TaskCounter from "components/TaskCounter/TaskCounter";
+import TaskCounter from "components/TaskCounter/TaskCounter";
 import TaskForm from "components/TaskForm/TaskForm";
 import TaskList from "components/TaskList/TaskList";
 
@@ -20,22 +20,19 @@ const TaskPage = () => {
     }, [dispatch]);
 
     return (
-        <TaskWrapper>
-            <TaskSection>
-                {/* <TaskCounter /> */}
-            </TaskSection>
+      <TaskWrapper>
+        <TaskSection>
+          {/* <h2>Filter by status</h2>
+                <StatusFilter /> */}
+          <TaskForm />
+          {isLoading && !error && <b>Request in progress...</b>}
+        </TaskSection>
 
-            <TaskSection>
-                {/* <h2>Filter by status</h2> */}
-                {/* <StatusFilter /> */}
-                <TaskForm />
-                {isLoading && !error && <b>Request in progress...</b>}
-            </TaskSection>
-            
-            <TaskSection>
-                <TaskList />
-            </TaskSection>
-        </TaskWrapper>
+        <TaskSection>
+          <TaskCounter />
+          <TaskList />
+        </TaskSection>
+      </TaskWrapper>
     );
 };
 
