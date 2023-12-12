@@ -6,7 +6,14 @@ import {
   fetchTasks,
   toggleCompleted,
 } from 'redux/tasks/operations';
+<<<<<<< Updated upstream
 import { TackText } from 'components/TaskList/TaskList.styled';
+=======
+import ButtonIcon from 'shared/Buttons/ButtonIcon';
+import { AiOutlineDelete } from 'react-icons/ai';
+import { TaskWrapper, TackText, TackTitle } from './Task.styled';
+import css from './checkbox.module.css'
+>>>>>>> Stashed changes
 
 const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -19,6 +26,7 @@ const Task = ({ task }) => {
   };
 
   return (
+<<<<<<< Updated upstream
     <div className={css.wrapper}>
       <input
         type="checkbox"
@@ -26,6 +34,25 @@ const Task = ({ task }) => {
         checked={task.done}
         onChange={() => handleToggle(!task.done)}
       />
+=======
+    <>
+      <TaskWrapper>
+        <label className={css.checkboxContainer}>
+          <input
+            className={css.customCheckbox}
+            checked={task.done}
+            onChange={() => handleToggle(!task.done)}
+            type="checkbox"
+          />
+          <span className={css.checkmark}></span>
+        </label>
+
+        <div>
+          <TackTitle>{task.title}</TackTitle>
+          <TackText>{task.text}</TackText>
+        </div>
+      </TaskWrapper>
+>>>>>>> Stashed changes
 
       <TackText>{task.title}</TackText>
       <TackText>{task.text}</TackText>

@@ -4,6 +4,7 @@ import theme from 'theme';
 export const TackListUl = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 20px;
   border-radius: 5px;
 `;
@@ -25,12 +26,5 @@ export const TackItemLi = styled.li`
   }
 `;
 
-export const TackText = styled.p`
-  text-align: left;
-  font-size: ${theme.fontSizes.xs};
-  font-weight: ${theme.fontWeights.light};
-  @media (min-width: 420px) {
-    font-size: ${theme.fontSizes.m};
-  }
-`;
+
 
