@@ -5,6 +5,7 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import ButtonIcon from 'shared/Buttons/ButtonIcon';
 import { toast } from 'react-toastify';
 import {
+  ContactButtonWraper,
   ContactItemLi,
   ContactListUl,
   ContactListWraper,
@@ -17,6 +18,7 @@ import {
   fetchDeleteContact,
 } from 'redux/contacts/contactsOperations';
 import { CounterContacts } from 'components/CounterContacts/CounterContacts';
+import CheckBox from 'shared/CheckBox/CheckBox';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -37,7 +39,6 @@ const ContactList = () => {
     <>
       <ContactListUl>
         <CounterContacts />
-        
 
         {list.map(({ _id, name, phone, email, favorite }) => {
           return (
@@ -47,18 +48,16 @@ const ContactList = () => {
                 <ContactNumber>{phone}</ContactNumber>
                 <ContactNumber>{email}</ContactNumber>
               </ContactListWraper>
-              <input
-                type="checkbox"
-                // className={css.checkbox}
-                checked={favorite}
-                // onChange={handleToggle}
-              />
 
-              <ButtonIcon
-                icon={AiOutlineDelete}
-                iconSize={20}
-                onClick={() => handleContactDelete(_id)}
-              ></ButtonIcon>
+              <ContactButtonWraper>
+                <CheckBox checked={favorite} />
+
+                <ButtonIcon
+                  icon={AiOutlineDelete}
+                  iconSize={20}
+                  onClick={() => handleContactDelete(_id)}
+                ></ButtonIcon>
+              </ContactButtonWraper>
             </ContactItemLi>
           );
         })}

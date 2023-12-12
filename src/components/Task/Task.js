@@ -8,6 +8,7 @@ import ButtonIcon from 'shared/Buttons/ButtonIcon';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { TaskWrapper, TackText, TackTitle } from './Task.styled';
 import css from './checkbox.module.css';
+import CheckBox from 'shared/CheckBox/CheckBox';
 
 const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -22,15 +23,10 @@ const Task = ({ task }) => {
   return (
     <>
       <TaskWrapper>
-        <label className={css.checkboxContainer}>
-          <input
-            className={css.customCheckbox}
-            checked={task.done}
-            onChange={() => handleToggle(!task.done)}
-            type="checkbox"
-          />
-          <span className={css.checkmark}></span>
-        </label>
+        <CheckBox
+          checked={task.done}
+          onChange={() => handleToggle(!task.done)}
+        />
 
         <div>
           <TackTitle>{task.title}</TackTitle>

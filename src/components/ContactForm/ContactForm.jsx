@@ -11,7 +11,6 @@ import {
   Error,
 } from './ContactForm.styled';
 
-
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -27,9 +26,8 @@ const ValidationSchema = Yup.object().shape({
 });
 
 const ContactForm = () => {
-
-const contacts = useSelector(store => store.contacts.items);
-const dispatch = useDispatch();
+  const contacts = useSelector(store => store.contacts.items);
+  const dispatch = useDispatch();
 
   const handleAddContact = data => {
     const name = data.name;
@@ -41,7 +39,7 @@ const dispatch = useDispatch();
     const phone = data.phone;
     const email = data.email;
     const action = fetchAddContact({ name, phone, email });
-    
+
     dispatch(action);
   };
 
@@ -87,7 +85,7 @@ const dispatch = useDispatch();
         <ErrorMessage name="phone" component={Error} />
 
         <Label htmlFor="email">Email</Label>
-        <Input id="email" name="email" placeholder="email" type="email" />
+        <Input id="email" name="email" placeholder="Email" type="email" />
         <ErrorMessage name="email" component={Error} />
 
         <Button type="submit" disabled={false} children="Add contact"></Button>

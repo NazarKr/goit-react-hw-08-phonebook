@@ -31,6 +31,12 @@ export const ContactListWraper = styled.div`
   flex-direction: column;
 `;
 
+export const ContactButtonWraper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const ContactName = styled.p`
   text-align: left;
   font-size: ${theme.fontSizes.s};
