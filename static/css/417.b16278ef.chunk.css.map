@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/417.b16278ef.chunk.css","mappings":"AAAA,8BAEI,cAAe,CADf,aAEJ,CAEA,qCACI,eACJ","sources":["shared/LanguageSwitcher/LanguageSwitcher.module.css"],"sourcesContent":[".lang {\n    margin: 0 10px;\n    cursor: pointer;\n}\n\n.currentLang {\n    font-weight: bold;\n}   "],"names":[],"sourceRoot":""}
