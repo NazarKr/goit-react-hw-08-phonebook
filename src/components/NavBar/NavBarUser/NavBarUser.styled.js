@@ -5,7 +5,6 @@ export const HeaderWraper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 20px;
 `
 
 export const Link = styled(NavLink)`

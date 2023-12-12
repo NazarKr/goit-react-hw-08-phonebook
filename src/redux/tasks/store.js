@@ -4,7 +4,7 @@
 
 // export const store = configureStore({
 //   reducer: {
-//     // tasks: tasksReducer,
-//     // taskFilters: taskfiltersReducer,
+//     tasks: tasksReducer,
+//     taskFilters: taskfiltersReducer,
 //   },
 // });
