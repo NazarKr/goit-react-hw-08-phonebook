@@ -20,8 +20,7 @@ export const NavBar = () => {
         />
       </NavLink>
         {!isLogin && <NavbarAuth />}
-      {isLogin && <NavbarUser />}
-      
+        {isLogin && <NavbarUser />}
       <LanguageSwitcher/>
       </HeaderWraper>
   );

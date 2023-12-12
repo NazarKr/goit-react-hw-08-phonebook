@@ -16,9 +16,9 @@ export const selectVisibleTasks = createSelector(
 
     switch (statusFilter) {
       case statusFilters.active:
-        return tasks.filter(task => !task.completed);
+        return tasks.filter(task => !task.done);
       case statusFilters.completed:
-        return tasks.filter(task => task.completed);
+        return tasks.filter(task => task.done);
       default:
         return tasks;
     }
@@ -26,11 +26,11 @@ export const selectVisibleTasks = createSelector(
 );
 
 export const selectTaskCount = createSelector([selectTasks], tasks => {
-  console.log("Calculating task count");
+  // console.log("Calculating task count");
 
   return tasks.reduce(
     (count, task) => {
-      if (task.completed) {
+      if (task.done) {
         count.completed += 1;
       } else {
         count.active += 1;

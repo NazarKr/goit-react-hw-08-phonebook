@@ -43,6 +43,31 @@ export const Input = styled(Field)`
   }
 `;
 
+export const InputText = styled(Field)`
+  margin-bottom: 10px;
+  height: 46px;
+  box-shadow: 0px 0px 20px -20px;
+  font-size: ${theme.fontSizes.m};
+  margin-left: ${theme.space[3]};
+  padding: ${theme.space[3]};
+  border: 1px solid #ccc;
+  border-radius: ${theme.radii.normal};
+  background-color: ${theme.colors.primary};
+
+  ::placeholder {
+    font-family: ${theme.fonts.body};
+    color: ${theme.colors.secondary};
+  }
+
+  :focus {
+    outline-color: #1976d2;
+  }
+
+  @media (min-width: 420px) {
+    font-size: ${theme.fontSizes.s};
+  }
+`;
+
 export const Error = styled.p`
   display: inline;
   position: absolute;

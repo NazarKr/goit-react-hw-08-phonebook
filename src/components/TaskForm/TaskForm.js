@@ -10,6 +10,7 @@ import {
   Input,
   Label,
   Error,
+  InputText,
 } from '../ContactForm/ContactForm.styled';
 
 const ValidationSchema = Yup.object().shape({
@@ -45,7 +46,6 @@ const TaskForm = () => {
       }}
       validationSchema={ValidationSchema}
       onSubmit={({ title, text }, { resetForm }) => {
-
         const task = {
           title: title,
           text: text,
@@ -62,7 +62,7 @@ const TaskForm = () => {
         <ErrorMessage name="title" component={Error} />
 
         <Label htmlFor="text">Text</Label>
-        <Input id="text" name="text" placeholder="Text" />
+        <InputText id="text" name="text" placeholder="Text" />
         <ErrorMessage name="text" component={Error} />
 
         <Button type="submit" disabled={false} children="Add tack"></Button>

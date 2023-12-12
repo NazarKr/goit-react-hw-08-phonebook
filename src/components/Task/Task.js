@@ -1,12 +1,13 @@
 import { useDispatch } from 'react-redux';
-import { MdClose } from 'react-icons/md';
-import css from './Task.module.css';
 import {
   deleteTask,
   fetchTasks,
   toggleCompleted,
 } from 'redux/tasks/operations';
 import { TackText } from 'components/TaskList/TaskList.styled';
+import ButtonIcon from 'shared/Buttons/ButtonIcon';
+import { AiOutlineDelete } from 'react-icons/ai';
+import { TaskWrapper } from './Task.styled';
 
 const Task = ({ task }) => {
   const dispatch = useDispatch();
@@ -19,21 +20,26 @@ const Task = ({ task }) => {
   };
 
   return (
-    <div className={css.wrapper}>
-      <input
-        type="checkbox"
-        className={css.checkbox}
-        checked={task.done}
-        onChange={() => handleToggle(!task.done)}
-      />
+    <>
+      <TaskWrapper>
+        <input
+          type="checkbox"
+          // className={css.checkbox}
+          checked={task.done}
+          onChange={() => handleToggle(!task.done)}
+        />
+        <div>
+          <TackText>{task.title}</TackText>
+          <TackText>{task.text}</TackText>
+        </div>
+      </TaskWrapper>
 
-      <TackText>{task.title}</TackText>
-      <TackText>{task.text}</TackText>
-
-      <button className={css.btn} onClick={() => handleDelete()}>
-        <MdClose size={24} />
-      </button>
-    </div>
+      <ButtonIcon
+        icon={AiOutlineDelete}
+        iconSize={20}
+        onClick={() => handleDelete()}
+      ></ButtonIcon>
+    </>
   );
 };
 
