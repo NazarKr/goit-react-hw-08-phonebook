@@ -1,4 +1,4 @@
-import Task from "components/Task/Task";
+import Task from "components/TaskList/Task/Task";
 import { useSelector } from "react-redux";
 import { selectVisibleTasks } from 'redux/tasks/selectors';
 import { TackItemLi, TackListUl } from "./TaskList.styled";

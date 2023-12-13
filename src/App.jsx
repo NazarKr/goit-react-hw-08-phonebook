@@ -12,7 +12,7 @@ export const App = () => {
         <UserRoutes />
         <ToastContainer
           position="top-center"
-          autoClose={2000}
+          autoClose={1500}
           hideProgressBar
           transition={Zoom}
           draggable

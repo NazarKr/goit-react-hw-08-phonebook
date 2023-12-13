@@ -18,6 +18,7 @@ const Task = ({ task }) => {
   const handleToggle = () => {
     dispatch(toggleCompleted(task));
     dispatch(fetchTasks());
+    console.log(task);
   };
 
   return (
