@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
- 
 import * as api from '../../shared/services/authAPI';
+import { toast } from 'react-toastify';
 
 export const register = createAsyncThunk(
   'auth/register',
@@ -21,6 +21,7 @@ export const login = createAsyncThunk(
       const result = await api.login(data);
       return result;
     } catch ({ response }) {
+      toast.warning(`${response.data.message}`);
       return rejectWithValue(response);
     }
   }

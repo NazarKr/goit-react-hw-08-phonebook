@@ -19,7 +19,7 @@ import {
   fetchStatusContact,
 } from 'redux/contacts/contactsOperations';
 import { CounterContacts } from 'components/CounterContacts/CounterContacts';
-import CheckBox from 'shared/CheckBox/CheckBox';
+import CheckBoxFavorite from 'shared/CheckBoxFavorite/CheckBoxFavorite';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -57,8 +57,7 @@ const ContactList = () => {
               </ContactListWraper>
 
               <ContactButtonWraper>
-                <CheckBox
-                  id={_id}
+                <CheckBoxFavorite
                   checked={favorite}
                   onChange={() => handleToggle(_id)}
                 />

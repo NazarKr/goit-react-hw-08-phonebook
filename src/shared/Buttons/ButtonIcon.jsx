@@ -21,8 +21,6 @@ const ButtonIcon = ({ icon: Icon = null, type, disabled, children, onClick, icon
 ButtonIcon.defaultProps = {
     onClick: () => null,
     children: null,
-    // primary: null,
 };
-
 
 export default ButtonIcon;

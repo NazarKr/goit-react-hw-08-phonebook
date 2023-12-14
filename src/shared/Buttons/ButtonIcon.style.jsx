@@ -12,7 +12,7 @@ export const ButtoIconStyled = styled.button`
     font-size: ${theme.fontSizes.s};
     cursor: pointer;
     &:hover {
-        background-color: #1976d2;
+        background-color: #f05557;
         box-shadow: 0px 0px 20px -18px;
     }
     &:active {

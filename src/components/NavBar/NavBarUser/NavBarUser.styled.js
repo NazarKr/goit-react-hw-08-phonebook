@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from 'theme';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderWraper = styled.div`
@@ -24,4 +25,12 @@ export const LogoutWrapper = styled.div`
     align-items: center;
     gap: 10px;
     margin-left: 20px;
+`;
+
+export const NameP = styled.p`
+  font-size: ${theme.fontSizes.s};
+  font-weight: ${theme.fontWeights.light};
+  @media (min-width: 420px) {
+    font-size: ${theme.fontSizes.s};
+  }
 `;
