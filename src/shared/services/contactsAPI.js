@@ -19,3 +19,10 @@ export const editContact = async id => {
   const { data } = await instance.put(`/contacts/${id}`);
   return data;
 };
+
+export const statusContact = async contact => {
+  const { data } = await instance.patch(`/contacts/${contact._id}/favorite`, {
+    favorite: !contact.favorite,
+  });
+  return data;
+};

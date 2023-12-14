@@ -16,6 +16,7 @@ import {
 import {
   fetchAllContacts,
   fetchDeleteContact,
+  fetchStatusContact,
 } from 'redux/contacts/contactsOperations';
 import { CounterContacts } from 'components/CounterContacts/CounterContacts';
 import CheckBox from 'shared/CheckBox/CheckBox';
@@ -27,11 +28,17 @@ const ContactList = () => {
     dispatch(fetchAllContacts());
   }, [dispatch]);
 
-  const list = useSelector(selectFilteredContacts);
+  const contacts = useSelector(selectFilteredContacts);
 
   const handleContactDelete = _id => {
     dispatch(fetchDeleteContact(_id));
     toast.warning(`Contact was deleted `);
+    dispatch(fetchAllContacts());
+  };
+
+  const handleToggle = _id => {
+    const contact = contacts.find(item => item._id === _id);
+    dispatch(fetchStatusContact(contact));
     dispatch(fetchAllContacts());
   };
 
@@ -40,7 +47,7 @@ const ContactList = () => {
       <ContactListUl>
         <CounterContacts />
 
-        {list.map(({ _id, name, phone, email, favorite }) => {
+        {contacts.map(({ _id, name, phone, email, favorite }) => {
           return (
             <ContactItemLi key={_id}>
               <ContactListWraper>
@@ -50,7 +57,11 @@ const ContactList = () => {
               </ContactListWraper>
 
               <ContactButtonWraper>
-                <CheckBox checked={favorite} />
+                <CheckBox
+                  id={_id}
+                  checked={favorite}
+                  onChange={() => handleToggle(_id)}
+                />
 
                 <ButtonIcon
                   icon={AiOutlineDelete}
