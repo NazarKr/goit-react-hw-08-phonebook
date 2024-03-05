@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "en": "Bread with Alioli",
+            "es": "Pan con Alioli"
+        },
+        "price": 2.50
+    },
+    {
+        "id": 2,
+        "name": {
+            "en": "Russian salad",
+            "es": "Ensaladilla Rusa"
+        },
+        "price 1/2": 3.00,
+        "price": 5.00
+    },
+    {
+        "id": 4,
+        "name": {
+            "en": "Crab Salad with Mary Rose Sauce",
+            "es": "Ensaladilla de Boca"
+        },
+        "price 1/2": 3.00,
+        "price": 5.00
+    },
+    {
+        "id": 6,
+        "name": {
+            "en": "Mussels with Chimichurry",
+            "es": "Mejillones al Chimichurry"
+        },
+        "price 1/2": 5.00,
+        "price": 9.00    },
+    {
+        "id": 8,
+        "name": {
+            "en": "Ham and Cheese Plater",
+            "es": "Tabla de Jamon y Quesos"
+        },
+        "price": 13.50
+    }
+]

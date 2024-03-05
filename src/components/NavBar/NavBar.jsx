@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { isUserLogin } from 'redux/auth/authSelector';
-import NavbarAuth  from './NavBarAuth/NavBarAuth';
+// import NavbarAuth  from './NavBarAuth/NavBarAuth';
 import NavbarUser from './NavBarUser/NavBarUser';
 import ButtonIcon from 'shared/Buttons/ButtonIcon';
 import { AiFillHome } from 'react-icons/ai';
@@ -19,8 +19,8 @@ export const NavBar = () => {
           iconSize={20}
         />
       </NavLink>
-        {!isLogin && <NavbarAuth />}
-        {isLogin && <NavbarUser />}
+        {/* {!isLogin && <NavbarAuth />} */}
+        {!isLogin && <NavbarUser />}
       <LanguageSwitcher/>
       </HeaderWraper>
   );

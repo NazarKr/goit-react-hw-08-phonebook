@@ -1,14 +1,14 @@
 {
     "contacts": {
         "en": "Contacts",
-        "ua": "Контакти"
+        "es": "Контакти"
     },
-    "tasks": {
-        "en": "Tasks",
-        "ua": "Завдання"
+    "breakfast": {
+        "en": "Breakfast",
+        "es": "Desayuno"
     },
-    "logout_text": {
-        "en": "Logout",
-        "ua": "Вихід"
+    "kidsmenu": {
+        "en": "Kids Menu",
+        "es": "Menù de Niños"
     }    
 }    

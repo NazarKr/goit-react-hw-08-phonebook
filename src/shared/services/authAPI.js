@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://nodejs-phonebook.onrender.com/',
+  baseURL: 'http://localhost:3001',
 });
 
 
@@ -21,7 +21,7 @@ const setToken = token => {
 };
 
 export const register = async data => {
-  const { data: result } = await instance.post('/auth/register', data);
+  const { data:   result } = await instance.post('/auth/register', data);
   setToken(result.token);
   return result;
 };

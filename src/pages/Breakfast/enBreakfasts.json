@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "en": "Small breakfast (1 sausage, 1 bacon, 1 hash brown, black pudding, tomato, beans, mushrooms and 1 toast)",
+            "es": "Desayuno ingles pequeño (1 salchica, 1 bacon, 1 hash Brown, Morcilla, tomate, alubias, champiñones y 1 tostada)"
+        },
+        "price": 4.90
+    },
+    {
+        "id": 2,
+        "name": {
+            "en": "Natural Yoghurt with Granola and Fruits of the Forest",
+            "es": "Yogur con cereales y frutos rojos"
+        },
+        "price": 3.80
+    },
+    {
+        "id": 3,
+        "name": {
+            "en": "Large Breakfast (2 sausage, 2 bacon, 2 hash brown,2 black pudding, tomato, beans, mushrooms and 2 toast)",
+            "es": "Desayuno ingles Grande (2 salchichas, 2 bacon, 2 hash Brown, 2 morcilla, tomate y Champiñones, alubias y 2 tostadas)"
+        },
+        "price": 8.80
+    },
+    {
+        "id": 4,
+        "name": {
+            "en": "Cantina Special (Toast, Scrambled Eggs, Smoked Salmon, Avocaado and Arugula)",
+            "es": "Especial de cantina (Tostada, revuelto de huevo, salmón ahumado, aguacate y rúcula)"
+        },
+        "price": 6.90
+    }
+]

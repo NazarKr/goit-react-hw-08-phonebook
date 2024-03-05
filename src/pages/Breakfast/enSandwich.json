@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "en": "Sandwich Ham and Cheese Sandwich",
+            "es": "Sándwich de Jamón York y Queso"
+        },
+        "price": 3.50
+    },
+    {
+        "id": 2,
+        "name": {
+            "en": "Veggie Sandwich (Lettuce, Onion, Tomato, Egg and Mayonaise)",
+            "es": "Sándwich Vegetal (Lechuga, Cebolla, Tomate, Huevo y Mayonesa)"
+        },
+        "price": 4.50
+    },
+    {
+        "id": 3,
+        "name": {
+            "en": "3 Layers club sandwich (Lettuce, Tomato, Onion, Chicken, Ham, Cheese, Bacon and Egg)",
+            "es": "Sandwich Club 3 capas (Lechuga, Tomate, Cebolla, Pollo, Jamon York, Queso, Bacon y huevo Duro)"
+        },
+        "price": 8.00
+    },
+    {
+        "id": 4,
+        "name": {
+            "en": "Bacon and Fried Egg Sandwich",
+            "es": "Sandwich de Bacon y Huevo Frito"
+        },
+        "price": 4.50
+    },
+    {
+        "id": 5,
+        "name": {
+            "en": "Tuna Sandwich (Lettuce, Onion, Tomato, Sweet corn, Tuna, Egg and Mayonaise)",
+            "es": "Sándwich de Atún(Lechuga, Cebolla, Tomate, Maiz, Atun, Huevo y Mayonesa)"
+        },
+        "price": 5.00
+    }
+]

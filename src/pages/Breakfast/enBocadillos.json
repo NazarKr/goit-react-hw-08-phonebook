@@ -1,0 +1,74 @@
+[
+    {
+        "id": 8,
+        "name": {
+            "en": "Baguette With Plain Omelette",
+            "es": "Baguette con Tortilla Francesa"
+        },
+        "price": 4.00
+    },
+    {
+        "id": 9,
+        "name": {
+            "en": "Bagutte with Pork Loin and Cheese",
+            "es": "Baguette con Lomo de Cerdo y Queso"
+        },
+        "price": 4.50
+    },
+    {
+        "id": 10,
+        "name": {
+            "en": "Baguette With Ham and Cheese",
+            "es": "Baguette con Jamón y Queso"
+        },
+        "price": 3.40
+    },
+    {
+        "id": 11,
+        "name": {
+            "en": "Baguette with Chicken and Bacon (Lettuce, Tomato, Onion and Mayonaise)",
+            "es": "Baguette con Pollo y Bacon (Lechuga, Tomate, Cebolla y Mayonesa)"
+        },
+        "price": 5.50
+    },
+    {
+        "id": 12,
+        "name": {
+            "en": "Toasted Baguette with Ham & Cheese",
+            "es": "Tostada con Jamón y Queso"
+        },
+        "price": 1.80
+    },
+    {
+        "id": 13,
+        "name": {
+            "en": "Toasted Baguette with Advocado Bacon and a Fried Egg",
+            "es": "Tostada con Aguacate, Bacon y Huevo Frito"
+        },
+        "price": 3.50
+    },
+    {
+        "id": 14,
+        "name": {
+            "en": "Baguette Cantina (Smoked Salmon, Cucumber, Cream Cheese and Avocado)",
+            "es": "Baguette Cantina (Salmón Ahumado, Pepino, Queso Crema y Aguacate)"
+        },
+        "price": 5.80
+    },
+    {
+        "id": 15,
+        "name": {
+            "en": "Baguette with Tuna (Lettuce, Tomato, Onion and Mayonaise)",
+            "es": "Baguette con Atún (Lechuga, Tomate, Cebolla y Mayonesa)"
+        },
+        "price": 5.00
+    },
+    {
+        "id": 16,
+        "name": {
+            "en": "Toasted Baguette with Nutella",
+            "es": "Tostada con Nutella"
+        },
+        "price": 2.10
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "en": "Toasted Baguette with jam and butter",
+            "es": "Tostada con Mantequilla y Mermelada"
+        },
+        "price": 1.40
+    },
+    {
+        "id": 2,
+        "name": {
+            "en": "Toasted Baguette with Tomato",
+            "es": "Tostada con Tomate"
+        },
+        "price": 1.40
+    },
+    {
+        "id": 3,
+        "name": {
+            "en": "Toasted Baguette with Tomato and Tuna",
+            "es": "Tostada con Tomate y Atún"
+        },
+        "price": 2.00
+    },
+    {
+        "id": 4,
+        "name": {
+            "en": "Toasted Baguette with Serrano Ham",
+            "es": "Tostada con Jamón Serrano"
+        },
+        "price": 2.00
+    },
+    {
+        "id": 5,
+        "name": {
+            "en": "Toasted Baguette with Machengo Cheese",
+            "es": "Tostada con Ques Machengo"
+        },
+        "price": 2.50
+    },
+    {
+        "id": 6,
+        "name": {
+            "en": "Toasted Baguette, Serrano Ham, Tomato and Manchego",
+            "es": "Tostada con Jamón Serrano, Tomate y Manchego"
+        },
+        "price": 3.00
+    },
+    {
+        "id": 7,
+        "name": {
+            "en": "Toasted Baguette with Cream Cheese, Smoked Salmon and Rocket",
+            "es": "Tostada con Queso Crema, Salmon Ahumado y Rúcula"
+        },
+        "price": 3.60
+    }
+]
