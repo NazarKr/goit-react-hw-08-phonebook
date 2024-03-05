@@ -1,21 +1,21 @@
-import { Navigate, Outlet } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import { getAuth } from '../../redux/auth/authSelector';
-import ReactSpinner from 'components/ReactSpinner/ReactSpinner';
+import { getAuth } from "../../redux/auth/authSelector";
+import ReactSpinner from "components/ReactSpinner/ReactSpinner";
 
-const PublicRoute = () => {
-  const { isLogin, token } = useSelector(getAuth);
+const PrivateRoute = () => {
+    const { isLogin, token } = useSelector(getAuth);
 
-  if (!isLogin && token) {
-    return ReactSpinner;
-  }
+    if (!isLogin && token) {
+        return ReactSpinner
+    }
 
-  if (isLogin) {
-    return <Navigate to="/" />;
-  }
+    if (!isLogin && !token) {
+        return <Navigate to="/" />
+    }
 
-  return <Outlet />;
-};
+    return <Outlet />
+}
 
-export default PublicRoute;
+export default PrivateRoute;
